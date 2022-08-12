@@ -5,7 +5,17 @@ import lombok.Data;
 @Data
 public class AccountValidateResponseBody {
 
-    private String accountName;
+    private String step1;
 
-    private String amount;
+    private String step2;
+
+    private String step3;
+
+    private String step4;
+
+    private String step5;
+
+    private String step6;
+
+    private String step7;
 }
