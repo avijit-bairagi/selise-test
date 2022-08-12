@@ -17,8 +17,13 @@ public class AccountServiceTest {
     @Test
     public void accountValidateTest() {
 
-        String actualAccountName = "Mr. Nazrul Islam";
-        String actualAmount = "MDCLXXXI";
+        String step1 = "Mr. Nazrul Islam";
+        String step2 = "H#U@UwWKbcL!";
+        String step3 = "HUUwWKbcL";
+        String step4 = "IVVxXLcdM";
+        String step5 = "IVVXXLCDM";
+        String step6 = "1681";
+        String step7 = "MDCLXXXI";
 
         AccountValidateRequestBody requestBody = new AccountValidateRequestBody();
         requestBody.setRequestId("A32W4ER2341");
@@ -29,9 +34,19 @@ public class AccountServiceTest {
 
         Assertions.assertNotNull(responseBody);
 
-        Assertions.assertEquals(responseBody.getAccountName(), actualAccountName,
-                "Account name not matched.");
-        Assertions.assertEquals(responseBody.getAmount(), actualAmount,
-                "Amount not matched.");
+        Assertions.assertEquals(responseBody.getStep1(), step1,
+                "Step1 not matched.");
+        Assertions.assertEquals(responseBody.getStep2(), step2,
+                "Step2 not matched.");
+        Assertions.assertEquals(responseBody.getStep3(), step3,
+                "Step3 not matched.");
+        Assertions.assertEquals(responseBody.getStep4(), step4,
+                "Step4 not matched.");
+        Assertions.assertEquals(responseBody.getStep5(), step5,
+                "Step5 not matched.");
+        Assertions.assertEquals(responseBody.getStep6(), step6,
+                "Step6 not matched.");
+        Assertions.assertEquals(responseBody.getStep7(), step7,
+                "Step7 not matched.");
     }
 }
